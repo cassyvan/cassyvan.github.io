@@ -12,11 +12,18 @@ a {
 }
 
 h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+h2 {
   font-size: 2.25rem;
+  font-weight: 500;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.875rem;
+  font-weight: 400;
 }
 
 @layer base {

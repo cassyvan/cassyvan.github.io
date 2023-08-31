@@ -1,13 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faLinkedinIn,
-  faReact,
-  faJs,
-  faJava,
-  faAws,
-  faNpm,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
 import { faFaceSmile } from "@fortawesome/free-regular-svg-icons";
 import { faCanadianMapleLeaf } from "@fortawesome/free-brands-svg-icons";
@@ -63,27 +55,33 @@ const HomePage = () => {
       <div className="flex items-center bottom-0 absolute">
         <ul className="flex gap-4">
           {techIcons.map((icon) => {
-            if (icon.includes("tailwind")) {
+            if (icon.name.includes("Tailwind")) {
               return (
-                <li key={icon.toString()}>
+                <li
+                  key={icon.name}
+                  className="hover:scale-105 py-4 px-1 border-2 rounded-full shadow-md"
+                >
                   <Image
-                    src={icon}
+                    src={icon.imagesrc}
                     width={60}
                     height={60}
-                    alt={icon.toString()}
-                    className="hover:scale-105 pt-3"
+                    alt={icon.name}
+                    title={icon.name}
                   />
                 </li>
               );
             }
             return (
-              <li key={icon.toString()}>
+              <li
+                key={icon.name}
+                className="hover:scale-105 border-2 rounded-full shadow-md p-1"
+              >
                 <Image
-                  src={icon}
+                  src={icon.imagesrc}
                   width={60}
                   height={60}
-                  alt={icon.toString()}
-                  className="hover:scale-105"
+                  alt={icon.name}
+                  title={icon.name}
                 />
               </li>
             );

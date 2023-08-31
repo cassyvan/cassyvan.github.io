@@ -1,30 +1,48 @@
 export const getTechLogos = (theme: string | undefined) => {
-  const react = "/images/techicons/react.svg";
+  const react = { imagesrc: "/images/techicons/react.svg", name: "React" };
 
-  const javascript = "/images/techicons/javascript.svg";
+  const javascript = {
+    imagesrc: "/images/techicons/javascript.svg",
+    name: "JavaScript",
+  };
 
-  const java = "/images/techicons/java.svg";
+  const java = { imagesrc: "/images/techicons/java.svg", name: "Java" };
 
-  const npm = "/images/techicons/npm.svg";
+  const npm = { imagesrc: "/images/techicons/npm.svg", name: "NPM" };
 
-  const tailwindCSS = "/images/techicons/tailwind-css.svg";
+  const tailwindCSS = {
+    imagesrc: "/images/techicons/tailwind-css.svg",
+    name: "Tailwind CSS",
+  };
 
-  const mongoDB = "/images/techicons/mongodb.svg";
+  const mongoDB = {
+    imagesrc: "/images/techicons/mongodb.svg",
+    name: "MongoDB",
+  };
 
-  const nextJS =
-    theme === "light"
-      ? "/images/techicons/nextjs.svg"
-      : "/images/techicons/nextjs-dark.svg";
+  const nextJS = {
+    imagesrc:
+      theme === "light"
+        ? "/images/techicons/nextjs.svg"
+        : "/images/techicons/nextjs-dark.svg",
+    name: "NextJS",
+  };
 
-  const typeScript =
-    theme === "light"
-      ? "/images/techicons/type-script.svg"
-      : "/images/techicons/typescript-dark.svg";
+  const typeScript = {
+    imagesrc:
+      theme === "light"
+        ? "/images/techicons/type-script.svg"
+        : "/images/techicons/typescript-dark.svg",
+    name: "TypeScript",
+  };
 
-  const aws =
-    theme === "light"
-      ? "/images/techicons/aws.svg"
-      : "/images/techicons/aws-dark.svg";
+  const aws = {
+    imagesrc:
+      theme === "light"
+        ? "/images/techicons/aws.svg"
+        : "/images/techicons/aws-dark.svg",
+    name: "AWS",
+  };
 
   return [
     react,

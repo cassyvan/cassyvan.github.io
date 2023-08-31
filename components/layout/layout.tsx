@@ -20,7 +20,9 @@ const Layout = ({ children }: childrenProps) => {
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <MainNavigation />
-      <main>{children}</main>
+      <main className="flex justify-center items-center gap-10 relative h-[40rem]">
+        {children}
+      </main>
     </ThemeProvider>
   );
 };

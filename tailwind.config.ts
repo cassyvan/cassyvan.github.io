@@ -16,6 +16,7 @@ const config: Config = {
       },
       animation: {
         avatar: "blob 12s linear infinite alternate",
+        lightbulb: "spin 12s linear infinite",
       },
     },
   },

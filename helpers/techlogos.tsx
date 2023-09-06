@@ -22,25 +22,25 @@ export const getTechLogos = (theme: string | undefined) => {
 
   const nextJS = {
     imagesrc:
-      theme === "light"
-        ? "/images/techicons/nextjs.svg"
-        : "/images/techicons/nextjs-dark.svg",
+      theme === "dark"
+        ? "/images/techicons/nextjs-dark.svg"
+        : "/images/techicons/nextjs.svg",
     name: "NextJS",
   };
 
   const typeScript = {
     imagesrc:
-      theme === "light"
-        ? "/images/techicons/type-script.svg"
-        : "/images/techicons/typescript-dark.svg",
+      theme === "dark"
+        ? "/images/techicons/typescript-dark.svg"
+        : "/images/techicons/type-script.svg",
     name: "TypeScript",
   };
 
   const aws = {
     imagesrc:
-      theme === "light"
-        ? "/images/techicons/aws.svg"
-        : "/images/techicons/aws-dark.svg",
+      theme === "dark"
+        ? "/images/techicons/aws-dark.svg"
+        : "/images/techicons/aws.svg",
     name: "AWS",
   };
 

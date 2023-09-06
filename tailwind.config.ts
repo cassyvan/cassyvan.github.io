@@ -24,10 +24,18 @@ const config: Config = {
           "70%": { transform: "rotate(105deg)" },
           "100%": { transform: "rotate(95deg)" },
         },
+        message: {
+          "0%": { transform: "rotate(0deg)" },
+          "10%": { transform: "rotate(10deg)" },
+          "20%": { transform: "rotate(20deg)" },
+          "30%": { transform: "rotate(10deg)" },
+          "40%": { transform: "rotate(0deg)" },
+        },
       },
       animation: {
         avatar: "blob 12s linear infinite alternate",
         fish: "fish 2s linear infinite",
+        message: "message 2s linear infinite",
       },
     },
   },

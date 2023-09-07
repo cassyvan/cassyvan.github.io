@@ -3,12 +3,18 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { getNavLinks } from "./../../helpers/navlinks";
+
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import MobileNav from "./mobile-nav";
 
 const MainNavigation = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  const [openMenu, setOpenMenu] = useState(false);
 
-  const navLinks = ["About", "Blog", "Projects", "Contact"];
+  const navLinks = getNavLinks();
 
   const pathName = usePathname();
 
@@ -24,30 +30,36 @@ const MainNavigation = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
+  const toggleMenu = () => {
+    setOpenMenu(!openMenu);
+  };
+
   return (
     <header>
       <nav className="flex items-center justify-between pt-5 pb-8 px-12 text-3xl font-semibold ">
         <div className="font-bold text-4xl hover:scale-105">
           <Link href="/">Cassy Van</Link>
         </div>
-        <ul className="flex gap-8">
-          {navLinks.map((link) => (
-            <li
-              key={link.toLowerCase()}
-              className="hover:text-red-300 dark:hover:text-sky-200"
-            >
-              <Link
-                href={`/${link.toLowerCase()}`}
-                className={
-                  pathName === `/${link.toLowerCase()}`
-                    ? "text-red-400 dark:text-sky-300"
-                    : ""
-                }
+        <ul className="flex ">
+          <div className="hidden custom:flex gap-8 space-x-4">
+            {navLinks.map((link) => (
+              <li
+                key={link.toLowerCase()}
+                className="hover:text-red-300 dark:hover:text-sky-200"
               >
-                {link}
-              </Link>
-            </li>
-          ))}
+                <Link
+                  href={`/${link.toLowerCase()}`}
+                  className={
+                    pathName === `/${link.toLowerCase()}`
+                      ? "text-red-400 dark:text-sky-300"
+                      : ""
+                  }
+                >
+                  {link}
+                </Link>
+              </li>
+            ))}
+          </div>
           <li className="pt-2 px-6">
             {theme === "dark" ? (
               <svg
@@ -83,8 +95,12 @@ const MainNavigation = () => {
               </svg>
             )}
           </li>
+          <li className="custom:hidden ">
+            <FontAwesomeIcon icon={faBars} onClick={toggleMenu} />
+          </li>
         </ul>
       </nav>
+      <MobileNav isOpen={openMenu} toggleMenu={toggleMenu} />
     </header>
   );
 };

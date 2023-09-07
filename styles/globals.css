@@ -30,4 +30,16 @@ h3 {
   body {
     @apply dark:bg-stone-900 bg-stone-50;
   }
+  h1 {
+    @apply text-3xl md:text-5xl lg:text-5xl xl:text-5xl text-center;
+  }
+  h2 {
+    @apply text-xl md:text-3xl lg:text-3xl xl:text-3xl text-center;
+  }
+  h3 {
+    @apply text-lg md:text-xl lg:text-xl xl:text-xl text-center;
+  }
+  p {
+    @apply text-base;
+  }
 }

@@ -1,7 +1,12 @@
+import ProjectsItem from "@/components/projects/projects-item";
+
 const ProjectsPage = () => {
   return (
-    <div>
-      <h1>Projects Page</h1>
+    <div className="flex justify-center">
+      <h1>My Recent Projects</h1>
+      <div>
+        <ProjectsItem />
+      </div>
     </div>
   );
 };

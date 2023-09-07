@@ -4,7 +4,7 @@ import Image from "next/image";
 import { faFaceSmile } from "@fortawesome/free-regular-svg-icons";
 import { faCanadianMapleLeaf } from "@fortawesome/free-brands-svg-icons";
 import { useTheme } from "next-themes";
-import { getTechLogos } from "@/helpers/techlogos";
+import { getTechLogos } from "../helpers/techlogos";
 
 const HomePage = () => {
   const { theme, setTheme } = useTheme();

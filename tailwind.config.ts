@@ -8,6 +8,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: { custom: "900px" },
       keyframes: {
         blob: {
           "0%, 100%": { borderRadius: "30% 60% 70% 40%/50% 60% 30% 60%" },
@@ -24,18 +25,20 @@ const config: Config = {
           "70%": { transform: "rotate(105deg)" },
           "100%": { transform: "rotate(95deg)" },
         },
-        message: {
-          "0%": { transform: "rotate(0deg)" },
-          "10%": { transform: "rotate(10deg)" },
-          "20%": { transform: "rotate(20deg)" },
-          "30%": { transform: "rotate(10deg)" },
-          "40%": { transform: "rotate(0deg)" },
+        slideInRight: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+        slideOutRight: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
         },
       },
       animation: {
         avatar: "blob 12s linear infinite alternate",
         fish: "fish 2s linear infinite",
-        message: "message 2s linear infinite",
+        openMenu: "slideInRight 0.3s ease-in-out",
+        closeMenu: "slideOutRight 0.3s ease-in-out",
       },
     },
   },

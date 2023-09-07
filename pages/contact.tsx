@@ -11,11 +11,10 @@ import Link from "next/link";
 
 const ContactPage = () => {
   return (
-    <div className="flex-col h-[40rem]">
+    <div className="flex-col h-[40rem] pt-12">
       <div className="flex justify-center ">
         <h1>
-          Contact{" "}
-          <FontAwesomeIcon icon={faMessage} className="animate-message" />
+          Contact <FontAwesomeIcon icon={faMessage} className="text-blue-400" />
         </h1>
       </div>
       <div className="flex justify-center py-12">
@@ -39,7 +38,7 @@ const ContactPage = () => {
           </div>
         </div>
         <div>
-          <FontAwesomeIcon icon={faLocationDot} className="pr-2" />
+          <FontAwesomeIcon icon={faLocationDot} className="pr-2 text-red-600" />
           Alberta, Canada
         </div>
       </div>

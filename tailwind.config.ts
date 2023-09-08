@@ -38,7 +38,7 @@ const config: Config = {
         avatar: "blob 12s linear infinite alternate",
         fish: "fish 2s linear infinite",
         openMenu: "slideInRight 0.3s ease-in-out",
-        closeMenu: "slideOutRight 0.3s ease-in-out",
+        closeMenu: "slideOutRight 3.3s ease-in-out",
       },
     },
   },

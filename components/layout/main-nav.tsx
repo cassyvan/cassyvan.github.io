@@ -95,8 +95,12 @@ const MainNavigation = () => {
               </svg>
             )}
           </li>
-          <li className="custom:hidden ">
-            <FontAwesomeIcon icon={faBars} onClick={toggleMenu} />
+          <li className="custom:hidden cursor-pointer">
+            <FontAwesomeIcon
+              icon={faBars}
+              onClick={toggleMenu}
+              className="hover:text-red-300 dark:hover:text-sky-200"
+            />
           </li>
         </ul>
       </nav>

@@ -1,66 +1,41 @@
-import Image from "next/image";
-import {
-  faAddressCard,
-  faLightbulb,
-} from "@fortawesome/free-regular-svg-icons";
-import {
-  faPaw,
-  faPuzzlePiece,
-  faStethoscope,
-  faFish,
-} from "@fortawesome/free-solid-svg-icons";
+import { faAddressCard } from "@fortawesome/free-regular-svg-icons";
+import { faFish } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import AboutItem from "@/components/about/about-item";
+import AboutItemReversed from "@/components/about/about-item-reverse";
+import {
+  getAboutDetails,
+  getAboutIntro,
+  getAboutOutro,
+} from "@/helpers/aboutitems-utils";
 
 const AboutPage = () => {
+  const aboutIntro = getAboutIntro();
+  const aboutDetails = getAboutDetails();
+  const aboutOutro = getAboutOutro();
+
   return (
-    <div className="flex justify-center items-end">
-      <div className="max-w-4xl pr-12">
+    <div className="flex justify-center items-end sm:flex sm:flex-col">
+      <div className="max-w-4xl pr-12 sm:p-0">
         <h1 className="pb-8">
           About <FontAwesomeIcon icon={faAddressCard} />
         </h1>
-        <div className="border-solid border-2">
-          <p>
-            Hi! I&apos;m Cassy, a passionate and dedicated software developer
-            with a keen focus on
-            <span className="block bg-red-300 dark:bg-sky-200 inset-1 -skew-y-2 relative inline-block">
-              web development
-            </span>
-            .
-          </p>
-          <br></br>
-          <p>
-            In a former life, I donned the scrubs as a Registered Nurse{" "}
-            <FontAwesomeIcon icon={faStethoscope} /> &nbsp; before making the
-            exciting leap into the world of technology.
-          </p>
-          <br></br>
-          <p>
-            My journey has led me to work alongside a diverse array of
-            individuals, and my journey in development has spanned from startups
-            to mid-size companies.
-          </p>
-          <p>
-            Always hungry for knowledge, I embrace every opportunity to learn
-            and grow. <FontAwesomeIcon icon={faLightbulb} />
-          </p>
-          <br></br>
-          <p>
-            Beyond coding and debugging, you&apos;ll find me engrossed in
-            solving puzzles &nbsp;
-            <FontAwesomeIcon icon={faPuzzlePiece} />
-            &nbsp; —murder mysteries happen to be my absolute favorite.
-          </p>
-          <br></br>
-          <p>
-            When I&apos;m not in front of a screen, I love spending quality time
-            with my four-legged companion, indulging in long walks and playful
-            moments. <FontAwesomeIcon icon={faPaw} />
-          </p>
-          <br></br>
-          <p>
-            I highly enjoy interacting with others, and listening to new ideas!
-            I am always open to connecting, so please feel free to contact me!
-          </p>
+        <div className="grid grid-cols-3 gap-12 sm:flex sm:flex-col">
+          <AboutItem
+            imageUrl={"/images/healthcare-tech.jpg"}
+            content={aboutIntro}
+            imageTitle={"healthcare-tech"}
+          />
+          <AboutItemReversed
+            imageUrl={"/images/journey.jpg"}
+            content={aboutDetails}
+            imageTitle={""}
+          />
+          <AboutItem
+            imageUrl={"/images/happy.jpg"}
+            content={aboutOutro}
+            imageTitle={"happyface"}
+          />
         </div>
         <div className="pt-8">
           <h3 className="block bg-red-300 dark:bg-sky-200 inset-1 skew-y-2 relative inline-block">

@@ -36,12 +36,12 @@ const MainNavigation = () => {
 
   return (
     <header>
-      <nav className="flex items-center justify-between pt-5 pb-8 px-12 text-3xl font-semibold ">
-        <div className="font-bold text-4xl hover:scale-105">
+      <nav className="flex items-center justify-between pt-5 pb-8 px-12 text-3xl font-semibold sm:px-2">
+        <div className="font-bold text-4xl hover:scale-105 sm:text-3xl">
           <Link href="/">Cassy Van</Link>
         </div>
         <ul className="flex ">
-          <div className="hidden custom:flex gap-8 space-x-4">
+          <div className="sm:hidden flex gap-8 space-x-4">
             {navLinks.map((link) => (
               <li
                 key={link.toLowerCase()}
@@ -95,7 +95,7 @@ const MainNavigation = () => {
               </svg>
             )}
           </li>
-          <li className="custom:hidden cursor-pointer">
+          <li className="hidden sm:flex cursor-pointer">
             <FontAwesomeIcon
               icon={faBars}
               onClick={toggleMenu}

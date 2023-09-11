@@ -5,7 +5,8 @@ const ProjectsPage = () => {
     <div className="flex justify-center">
       <h1>My Recent Projects</h1>
       <div>
-        <ProjectsItem />
+        {/* <ProjectsItem />
+         */}
       </div>
     </div>
   );

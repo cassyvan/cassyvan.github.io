@@ -8,7 +8,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      screens: { custom: "900px" },
+      screens: { sm: { max: "900px" } },
       keyframes: {
         blob: {
           "0%, 100%": { borderRadius: "30% 60% 70% 40%/50% 60% 30% 60%" },

@@ -13,8 +13,12 @@ const ContactPage = () => {
   return (
     <div className="flex-col h-[40rem] mt-20 sm:flex sm:items-center">
       <div className="flex justify-center sm:flex sm:flex-col">
-        <h1>
-          Contact <FontAwesomeIcon icon={faMessage} className="text-blue-400" />
+        <h1 className="underline">
+          Contact
+          <FontAwesomeIcon
+            icon={faMessage}
+            className="text-blue-400 pl-8 sm:pl-2"
+          />
         </h1>
       </div>
       <div className="flex justify-center py-12">

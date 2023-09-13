@@ -12,7 +12,7 @@ export const getAboutIntro = () => {
       <p>
         Hi! I&apos;m Cassy, a passionate and dedicated software developer with a
         keen focus on
-        <span className="block bg-red-300 dark:bg-sky-200 inset-1 -skew-y-2 relative inline-block">
+        <span className="block bg-red-300 dark:bg-sky-200 inset-0 skew-y-2 relative inline-block">
           web development
         </span>
         .

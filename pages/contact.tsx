@@ -17,7 +17,7 @@ const ContactPage = () => {
           Contact
           <FontAwesomeIcon
             icon={faMessage}
-            className="text-blue-400 pl-8 sm:pl-2"
+            className="text-blue-400 pl-4 sm:pl-2"
           />
         </h1>
       </div>

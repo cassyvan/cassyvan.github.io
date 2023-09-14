@@ -1,8 +1,8 @@
 ---
 title: "Getting Started with NextJS and Tailwind CSS"
-date: "2023-09-13"
+date: "2023-09-15"
 image: tailwind-nextjs.png
-excerpt: In the fast-evolving world of web development, finding the right tools to streamline your workflow and deliver exceptional results is essential. Among the top contenders in the modern web development landscape are Next.js and Tailwind CSS.
+excerpt: Next.js and Tailwind CSS streamline web development with efficient server-side rendering, routing, and responsive styling.
 isFeatured: true
 ---
 

@@ -19,7 +19,7 @@ const PostItem = ({ post }: props) => {
     <div className="shadow-md max-w-5xl p-3 outline outline-dotted outline-1 outline-red-300 dark:outline-sky-300 col-span-1">
       <Link
         href={postLinkPath}
-        className="flex justify-center items-center gap-4"
+        className="flex justify-center items-center gap-4 sm:flex sm:flex-col-reverse"
       >
         <Image
           src={postImageUrl}

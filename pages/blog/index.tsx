@@ -16,7 +16,7 @@ const BlogHomePage = ({ posts }: props) => {
   return (
     <div className="flex flex-col items-center gap-8">
       <h1 className="underline">Blog</h1>
-      <div className="grid grid-cols-2  max-w-6xl h-[10rem]">
+      <div className="grid grid-cols-2  max-w-6xl h-[10rem] sm:flex sm:flex-col sm:mx-6">
         {posts.map((post) => (
           <PostItem post={post} key={post.date} />
         ))}

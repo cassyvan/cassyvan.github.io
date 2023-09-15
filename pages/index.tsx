@@ -12,7 +12,7 @@ const HomePage = () => {
   const techIcons = getTechLogos(theme);
 
   return (
-    <div className="flex justify-center items-center gap-10 relative h-[40rem] sm:h-[auto] sm:flex-col">
+    <div className="flex justify-center items-center gap-10 -mt-12 relative h-[40rem] sm:h-[auto] sm:flex-col">
       <Image
         src="/images/avatarwave.png"
         alt="Cassy's Avatar"

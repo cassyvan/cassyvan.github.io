@@ -26,3 +26,5 @@ You can create a new Next.js project using the _create-next-app_ command-line to
 npx create-next-app my-nextjs-app
 cd my-nextjs-app
 ```
+
+\*This post is still currently in the works

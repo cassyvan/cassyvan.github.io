@@ -1,16 +1,17 @@
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+
 interface props {
-  post: {
-    content: string;
-    slug: string;
-    date: string;
-    title: string;
-    excerpt: string;
-    image: string;
-  };
+  content: string;
 }
 
-const PostContent = ({ post }: props) => {
-  return <div>{post.content}</div>;
+const PostContent = ({ content }: props) => {
+  return (
+    <div>
+      <ReactMarkdown className="flex flex-col gap-6 leading-loose">
+        {content}
+      </ReactMarkdown>
+    </div>
+  );
 };
 
 export default PostContent;

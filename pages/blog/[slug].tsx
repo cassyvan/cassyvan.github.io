@@ -24,7 +24,7 @@ const PostDetail = ({ post }: props) => {
           <Image src={postImageUrl} alt={post.title} width={500} height={500} />
         </div>
         <div className="max-w-4xl">
-          <PostContent post={post} />
+          <PostContent content={post.content} />
         </div>
       </div>
     </div>

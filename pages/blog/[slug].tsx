@@ -1,5 +1,6 @@
 import PostContent from "@/components/blog/post-content";
 import { getPostData, getPostsFiles } from "@/helpers/posts-utils";
+import Image from "next/image";
 
 interface props {
   post: {
@@ -13,10 +14,19 @@ interface props {
 }
 
 const PostDetail = ({ post }: props) => {
+  const postImageUrl = `/images/posts/${post.slug}/${post.image}`;
+
   return (
-    <div>
+    <div className="flex flex-col items-center gap-8 m-8">
       <h1>{post.title}</h1>
-      <PostContent post={post} />
+      <div className="flex flex-col items-center gap-4">
+        <div>
+          <Image src={postImageUrl} alt={post.title} width={500} height={500} />
+        </div>
+        <div className="max-w-4xl">
+          <PostContent post={post} />
+        </div>
+      </div>
     </div>
   );
 };

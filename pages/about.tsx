@@ -43,7 +43,13 @@ const AboutPage = () => {
         </div>
         <div className="pt-8 sm:pt-6 pb-16 sm:text-center">
           <h3 className="block bg-red-300 dark:bg-sky-200 inset-1 skew-y-2 relative inline-block">
-            Resume.pdf
+            <a
+              href="https://cassyvan.vercel.app/files/resume.pdf"
+              target="_blank"
+              type="application/pdf"
+            >
+              Resume.pdf
+            </a>
           </h3>
         </div>
       </div>

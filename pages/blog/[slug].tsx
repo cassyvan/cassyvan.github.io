@@ -18,13 +18,13 @@ const PostDetail = ({ post }: props) => {
 
   return (
     <div className="flex flex-col items-center gap-8 m-8">
-      <h1>{post.title}</h1>
+      <h1 className="sm:text-4xl">{post.title}</h1>
       <div className="flex flex-col items-center gap-4">
         <div>
           <Image src={postImageUrl} alt={post.title} width={500} height={500} />
         </div>
         <div className="max-w-4xl">
-          <PostContent post={post} />
+          <PostContent content={post.content} />
         </div>
       </div>
     </div>

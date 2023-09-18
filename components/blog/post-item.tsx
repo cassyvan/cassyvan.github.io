@@ -16,16 +16,16 @@ const PostItem = ({ post }: props) => {
   const postImageUrl = `/images/posts/${post.slug}/${post.image}`;
   const postLinkPath = `/blog/${post.slug}`;
   return (
-    <div className="shadow-md max-w-5xl p-3 outline outline-dotted outline-1 outline-red-300 dark:outline-sky-300">
+    <div className="shadow-md max-w-5xl p-3 outline outline-dotted outline-1 outline-red-300 dark:outline-sky-300 col-span-1">
       <Link
         href={postLinkPath}
-        className="flex justify-center items-center gap-4 outline outline-red-300 dark:outline-sky-300 p-1 rounded-md"
+        className="flex justify-center items-center gap-4 sm:flex sm:flex-col-reverse"
       >
         <Image
           src={postImageUrl}
           alt={post.title}
-          width={100}
-          height={100}
+          width={200}
+          height={200}
           className="rounded-full"
         />
         <h3 className="text-xl font-semibold">{post.title}</h3>

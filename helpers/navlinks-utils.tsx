@@ -1,3 +1,3 @@
 export const getNavLinks = () => {
-  return ["About", "Blog", "Projects", "Contact"];
+  return ["About", "Projects", "Contact"];
 };
